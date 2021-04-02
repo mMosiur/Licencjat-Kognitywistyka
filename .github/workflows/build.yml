@@ -1,0 +1,16 @@
+name: build
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Compile LaTeX source
+        run: latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf thesis.tex
+        working-directory: ./Source

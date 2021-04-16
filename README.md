@@ -14,5 +14,6 @@ Wymagany `texlive` wraz z narzędziem do kompilacji `latexmk`
 
 ``` bash
 cd Source
-latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf thesis.tex
+latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf -outdir=out thesis.tex
+cp out/thesis.pdf "../Głębokie uczenie maszynowe a neuronauka.pdf"
 ```

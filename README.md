@@ -1,4 +1,4 @@
-# Głębokie uczenie maszynowe a neuronauka
+# Uczenie głębokie i maszynowe a mózg
 
 [![build](https://github.com/mMosiur/Licencjat-Kognitywistyka/actions/workflows/build.yml/badge.svg)](https://github.com/mMosiur/Licencjat-Kognitywistyka/actions/workflows/build.yml)
 
@@ -15,5 +15,5 @@ Wymagany `texlive` wraz z narzędziem do kompilacji `latexmk`
 ``` bash
 cd Source
 latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf -outdir=out thesis.tex
-cp out/thesis.pdf "../Głębokie uczenie maszynowe a neuronauka.pdf"
+cp out/thesis.pdf "../Uczenie głębokie i maszynowe a mózg.pdf"
 ```

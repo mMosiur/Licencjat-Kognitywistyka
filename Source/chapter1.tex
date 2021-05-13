@@ -12,5 +12,14 @@ Najwcześniej używanym były algorytmy genetyczne inspirowane ewolucyjnym chara
 
 Tak jak psychologia czerpała z informatyki inspirację przy budowaniu metafory komputerowej, tak dziedzina uczenia maszynowego inspirowała się obecnymi w naturze zjawiskami wszelkiego rodzaju uczenia się.
 Idea algorytmów genetycznych i programowania genetycznego została wyprowadzona jako przeniesienie teorii ewolucji w naturze.
-Najbardziej fundamentalna jednostka popularnych dzisiaj sztucznych sieci neuronowych -- sztuczny neuron, czy perceptron -- zostały po raz pierwszy zaproponowane jako matematyczny model naśladujący działanie neuronu biologicznego.
+Najbardziej fundamentalna jednostka popularnych dzisiaj sztucznych sieci neuronowych -- sztuczny neuron, czy perceptron -- zostały po raz pierwszy zaproponowane jako matematyczny model naśladujący działanie neuronu biologicznego \cite{mcculloch1943logical}.
 
+Początkowo neuron McCullocha-Pittsa bezpośrednio odwzorowywał działanie biologicznego odpowiednika, w tym na przykład traktując wyjście modelu binarnie jako \emph{aktywne} lub \emph{nieaktywne}.
+Później także podobnie jak w biologicznym układzie nerwowym złożonym ze skomplikowanej sieci neuronów zaczęto wykorzystywać perceptrony wielowarstwowe propagujące sygnał wgłąb modelu \cite{rosenblatt1961principles}.
+Mimo tego, że koncepcje podstawowe wykorzystane w sztucznych sieciach neuronowych były bezpośrednio zainspirowane biologicznymi odpowiednikami, szybko okazało się, że wprowadzane modyfikacje architektury i działania sieci znacznie poprawiają ich skuteczność.
+Zmiany te jednak nie tylko nie były wynikiem przełożenia wiedzy neuronaukowej do uczenia maszynowego, ale przeciwnie -- odstępowały od podobieństwa do natury na rzecz złożonych modeli matematycznych oraz udogodnień i usprawnień z nich wynikających.
+Z czasem jednak zaczęto odchodzić od takiego modelu wyjścia na rzecz funkcji liniowych, a później złożonych nieliniowych, co okazało się znacznie skuteczniejsze i efektywniejsze \cite{sharma2017activation} w rozwiązywaniu problemów poszukiwania minimum funkcji kosztu.
+% Liniowe: \cite{minsky2017perceptrons}, nieliniowe: \cite{haykin1994neural}
+
+Dodatkowo od strony neuronauki pokładano nadzieje, że rozwój tych sztucznych systemów wzorowanych na biologicznym układzie nerwowym pozwoli nam w lepszy sposób zrozumieć mózg.
+Wiedziano, że znacznie prostsze jest zrozumienie złożonego systemu poprzez zbudowanie go od podstaw niż próby wykorzystania inżynierii wstecznej na danych obserwacyjnych z nim związanych \cite{braitenberg1986vehicles}.

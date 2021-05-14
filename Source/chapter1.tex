@@ -16,10 +16,15 @@ Najbardziej fundamentalna jednostka popularnych dzisiaj sztucznych sieci neurono
 
 Początkowo neuron McCullocha-Pittsa bezpośrednio odwzorowywał działanie biologicznego odpowiednika, w tym na przykład traktując wyjście modelu binarnie jako \emph{aktywne} lub \emph{nieaktywne}.
 Później także podobnie jak w biologicznym układzie nerwowym złożonym ze skomplikowanej sieci neuronów zaczęto wykorzystywać perceptrony wielowarstwowe propagujące sygnał wgłąb modelu \cite{rosenblatt1961principles}.
+
+Dodatkowo od strony neuronauki pokładano nadzieje, że rozwój tych sztucznych systemów wzorowanych na biologicznym układzie nerwowym pozwoli nam w lepszy sposób zrozumieć działanie mózgu.
+Znacznie prostsze jest zrozumienie złożonego systemu poprzez zbudowanie go od podstaw niż próby wykorzystania inżynierii wstecznej na danych obserwacyjnych z nim związanych \cite{braitenberg1986vehicles}.
+
+Obie dziedziny zaczęły się jednak od siebie coraz bardziej oddalać.
+Rozwój uczenia maszynowego -- w tym przede wszystkim uczenia głębokiego -- opierał się na optymalizacji funkcji kosztu i odkryciach natury matematycznej z tym związanych \cite{sutskever2013importance}.
 Mimo tego, że koncepcje podstawowe wykorzystane w sztucznych sieciach neuronowych były bezpośrednio zainspirowane biologicznymi odpowiednikami, szybko okazało się, że wprowadzane modyfikacje architektury i działania sieci znacznie poprawiają ich skuteczność.
 Zmiany te jednak nie tylko nie były wynikiem przełożenia wiedzy neuronaukowej do uczenia maszynowego, ale przeciwnie -- odstępowały od podobieństwa do natury na rzecz złożonych modeli matematycznych oraz udogodnień i usprawnień z nich wynikających.
-Z czasem jednak zaczęto odchodzić od takiego modelu wyjścia na rzecz funkcji liniowych, a później złożonych nieliniowych, co okazało się znacznie skuteczniejsze i efektywniejsze \cite{sharma2017activation} w rozwiązywaniu problemów poszukiwania minimum funkcji kosztu.
-% Liniowe: \cite{minsky2017perceptrons}, nieliniowe: \cite{haykin1994neural}
-
-Dodatkowo od strony neuronauki pokładano nadzieje, że rozwój tych sztucznych systemów wzorowanych na biologicznym układzie nerwowym pozwoli nam w lepszy sposób zrozumieć mózg.
-Wiedziano, że znacznie prostsze jest zrozumienie złożonego systemu poprzez zbudowanie go od podstaw niż próby wykorzystania inżynierii wstecznej na danych obserwacyjnych z nim związanych \cite{braitenberg1986vehicles}.
+Binarna funkcja aktywacji -- podobna do zachowania neuronu biologicznego -- okazała się gorsza od funkcji liniowych \cite{minsky2017perceptrons}, a te znowu ustępowały funkcjom nieliniowym \cite{haykin1994neural}.
+Nowe wykorzystywane funkcje były skuteczniejsze i efektywniejsze \cite{sharma2017activation} w rozwiązywaniu problemów poszukiwania minimum funkcji kosztu.
+Z drugiej strony w neuronauce odkryto wiele typów komórek, stanów komórkowych, mechanizmów obliczeniowych i przechowywania informacji oraz obszarów mózgowych \cite{solari2011cognitive}.
+Nacisk kładziony był raczej na strukturę i budowę mózgu oraz różnej skali elementów go budujących a sieci neuronowe zaczęły przyjmować raczej rolę potężnego, ale prostego narzędzia jak w każdej innej dziedzinie, bez większych czy mocniejszych powiązań.

@@ -1,0 +1,90 @@
+\chapter{Neuronaukowe korzenie uczenia maszynowego}
+\label{chapter1}
+
+Już niedługo po pierwszych teoriach i propozycjach dotyczących maszyn przeprowadzających obliczenia przedstawiły się one jako ciekawa koncepcja dla filozofii umysłu i psychologii.
+Maszyna Turinga ze swoimi możliwościami przetwarzania informacji oraz terminologia z nią związana stały się nową popularną metaforą działania umysłu.
+Aktualnie prawie każdy większy dział nauk humanistycznych ma swój komputacjonistyczny odłam skupiający się na tym właśnie aspekcie jako wbudowanej cesze świata rzeczywistego.
+Był to kolejny z wielu innych trendów analogii i metafory w psychologii \cite{vroon1987man}, jednak z biegiem czasu przez wielu uważany za najbliższy prawdy.
+
+\section{Algorytmy uczenia maszynowego inspirowane naturą i biologią}
+
+Największą różnicą między możliwościami umysłu człowieka a tym, co w przyszłości zostanie nazwane komputerem była koncepcja uczenia się.
+Pierwsze użycie sformułowania "uczenie maszynowe" przypisuje się Arturowi Samuelowi, który takim określeniem opisał algorytmy podejmujące decyzje bez wcześniejszego jawnego zaprogramowania ich do takiego ich wykonywania \cite{koza1996automated}.
+Dzisiaj dział informatyki, nazwany identycznie jak wspomniana grupa algorytmów, skupia w sobie wiele różnych paradygmatów i podejść, z których każde ma własne założenia, ograniczenia i osiągnięcia.
+Jednymi z najwcześniej używanych były populacyjno-stochastyczne algorytmy genetyczne, inspirowane ewolucyjnym charakterem przyrody.
+
+Tak jak psychologia czerpała z informatyki inspirację przy budowaniu metafory komputerowej, tak dziedzina uczenia maszynowego inspirowała się obecnymi w naturze zjawiskami wszelkiego rodzaju uczenia się.
+Idea algorytmów genetycznych i programowania genetycznego została wyprowadzona jako bezpośrednie przeniesienie teorii ewolucji w naturze.
+Jest to jednocześnie przykład, jak uczenie maszynowe może poprzez mechanizm sprzężenia zwrotnego wspomóc obszar jego pierwotnej inspiracji.
+Użycie algorytmów genetycznych było pomocne przy demonstracjach i dowodzeniu teorii z zakresu Darwinowskiej ewolucji, takich jak wpływ adaptacji na selekcję, i zwrotny wpływ selekcji na adaptację \cite{bruderer1996organizational}.
+
+Najbardziej fundamentalna jednostka popularnych dzisiaj sztucznych sieci neuronowych -- sztuczny neuron, czy perceptron -- zostały po raz pierwszy zaproponowane jako matematyczny model naśladujący działanie neuronu biologicznego \cite{mcculloch1943logical}.
+Początkowo neuron McCullocha-Pittsa bezpośrednio odwzorowywał działanie biologicznego odpowiednika, w tym na przykład traktując wyjście modelu binarnie jako \emph{aktywne} lub \emph{nieaktywne}.
+Później także podobnie jak w biologicznym układzie nerwowym złożonym ze skomplikowanej sieci neuronów zaczęto wykorzystywać perceptrony wielowarstwowe propagujące sygnał wgłąb modelu \cite{rosenblatt1961principles}.
+Obszar uczenia maszynowego skupiający się właśnie na wykorzystaniu takich wielowarstwowych sztucznych sieci neuronowych został nazwany \emph{uczeniem głębokim} (\emph{deep learning}), podkreślając jednocześnie rolę ilości warstw w skuteczności działania takich sieci.
+
+Sukces nadzorowanego głębokiego uczenia może wkrótce zostać prześcignięty przez \emph{uczenie przez wzmacnianie} (\emph{reinforcement learning}), które również inspirowane jest konceptami neuronaukowymi.
+W tym podejściu zamiast uczenia systemu na bazie ogromnej ilości opisanych i skategoryzowanych danych pozwalamy mu na iteracyjne poprawianie swojego działania poprzez odpowiedź środowiska, w którym działa czy nawet własnego klona.
+Przypominać to może sposób uczenia się organizmów żywych.
+
+Warto tutaj również sprecyzować użytą wyżej terminologią.
+Uczenie przez wzmacnianie również może być skategoryzowane jako podzbiór głębokiego uczenia -- opiera się ono bowiem na głębokich, wielowarstwowych sieciach neuronowych, podpadając pod odpowiednią definicję.
+Rozróżnienie to jest tutaj wynikiem dość częstego nazywania nadzorowanego głębokiego uczenia maszynowego po prostu uczeniem głębokim.
+Uczenie nadzorowane (\emph{supervised learning}) jest jedną z trzech najpopularniejszych podzbiorów uczenia maszynowego obok uczenia nienadzorowanego (\emph{unsupervised learning}) oraz właśnie uczenia przez wzmacnianie.
+Podział ten opierany jest na sposobie uczenia się, gdzie określenie \emph{uczenie głębokie} odnosi się do rodzaju użytych sztucznych sieci neuronowych i zahacza o wszystkie z tych grup algorytmów.
+
+Jak widać na podanych przykładach, wiele systemów oraz idei obszaru uczenia maszynowego miało swoją inspirację w naturze czy neurobiologii.
+Dodatkowo od strony neuronauki pokładano nadzieje, że rozwój tych sztucznych systemów wzorowanych na biologicznym układzie nerwowym pozwoli nam w lepszy sposób zrozumieć działanie mózgu, podobnie jak w przypadku algorytmów genetycznych.
+Znacznie prostsze jest zrozumienie złożonego systemu poprzez zbudowanie go od podstaw niż próby wykorzystania inżynierii wstecznej na danych obserwacyjnych z nim związanych \cite{braitenberg1986vehicles}.
+
+Obie dziedziny zaczęły się jednak z czasem coraz bardziej oddalać od siebie oddalać, przeciwnie do spekulacji.
+
+Rozwój uczenia maszynowego -- w tym przede wszystkim uczenia głębokiego -- opierał się na optymalizacji funkcji kosztu i odkryciach natury matematycznej z tym związanych \cite{sutskever2013importance}.
+Mimo tego, że koncepcje podstawowe wykorzystane w sztucznych sieciach neuronowych były bezpośrednio zainspirowane biologicznymi odpowiednikami, szybko okazało się, że wprowadzane modyfikacje pierwotnej architektury i działania sieci znacznie poprawiają ich skuteczność.
+Zmiany te jednak nie tylko nie były wynikiem przełożenia wiedzy neuronaukowej do uczenia maszynowego, a wręcz przeciwnie -- odstępowały od podobieństwa do natury na rzecz złożonych modeli matematycznych oraz udogodnień i usprawnień z nich wynikających.
+Problem funkcji kosztu okazał się wyjątkowo ważny w sieciach głębokich, a do jego rozwiązania zaczęto wykorzystywać algorytm wstecznej propagacji błędu \cite{rumelhart1985learning}.
+Jego skuteczność zależała natomiast od wykorzystanej funkcji aktywacji.
+Funkcja binarna funkcja -- podobna do zachowania neuronu biologicznego -- okazała się gorsza od funkcji liniowych \cite{minsky2017perceptrons}, a te znowu ustępowały funkcjom nieliniowym \cite{haykin1994neural}.
+Nowe wykorzystywane funkcje były skuteczniejsze i efektywniejsze \cite{sharma2017activation} w rozwiązywaniu problemów poszukiwania minimum funkcji kosztu.
+Jednocześnie oddalały się od swoich biologicznych korzeni działania.
+
+Z drugiej strony w neuronauce odkryto wiele typów komórek, stanów komórkowych, mechanizmów obliczeniowych i przechowywania informacji oraz obszarów mózgowych \cite{solari2011cognitive}.
+Nacisk kładziony był raczej na strukturę i budowę mózgu oraz różnej skali elementów go budujących, a sieci neuronowe zaczęły przyjmować raczej rolę zwykłego narzędzia jak w każdej innej dziedzinie, bez większych, mocniejszych czy bezpośrednich powiązań.
+Szukano w mózgu podobnych technik działania jak te implementowane w sztucznych sieciach neuronowych, jednak okazywały się one w zdecydowanej większości nieistniejące.
+Wcześniej wspomniana wsteczna propagacja błędu nie ma swojego odpowiednika w mózgu \cite{hassabis2017neuroscience}, nawet takiego, który byłby tylko zbliżony ideowo.
+
+Warto również wspomnieć, że rozwój obszaru uczenia maszynowego nie wpłynął na dziedziny odnoszące się do komputerów jako systemów symbolicznych i ich zestawienia z człowiekiem.
+W psychologii nadal dominowała i dominuje metafora komputerowa \cite{casey1989computational}, nie przeniesiono uwagi na sztuczne sieci neuronowe, mimo, że wydają się one z pozoru być lepszym odzwierciedleniem mózgu człowieka, głównego źródła poznania i umysłu.
+Podobnie w filozofii -- nawet, gdy sieci neuronowe były już znane, nadal odwoływano się do komputera jako całości sprowadzając uczenie maszynowe do wyłącznie algorytmu wykonywanego przez urządzenie symboliczne \cite{searle1980minds}.
+Ogólne postrzeganie tej dziedziny sztucznej inteligencji nie wydawało się więc być bliżej działania mózgu -- a w konsekwencji człowieka -- niż tradycyjny pogląd na komputer.
+
+\section{Podstawowe różnice między uczeniem głębokim a funkcjonowaniem mózgu}
+
+Oczywiste jest, że mózg, jako byt architekturalnie, logicznie i fizycznie różny od uczenia maszynowego czy szerzej pojętych komputerów, będzie działał inaczej niż one.
+Nawet porównując ze sobą bezpośrednio mózgi dwóch osób okazuje się, że czasem są one nie tylko funkcjonalnie, ale także strukturalnie różne.
+Różnią się mózgi mężczyzn i kobiet \cite{ingalhalikar2014sex}, różnić się będzie mózg psychopaty \cite{fallon2017neuroanatomical} czy nawet różnić się będą mózgi osób z różnych klas społecznych \cite{rushton1996brain}.
+Kiedy więc nawet pozornie identyczne obiekty zaczynają wykazywać spore różnice strukturalne, nie jest zaskoczeniem, że fundamentalnie inne modele przetwarzania informacji będą działać sprzecznie z działaniem ludzkiego mózgu.
+
+Wszelkie zgodności pomiędzy poszczególnymi metodami głębokiego uczenia maszynowego i działaniem mózgu nie muszą, a nawet nie mogą być generalizowane do całości dziedziny \cite{de2018deep}.
+Warto jednak przeanalizować ten aspekt, gdyż te fundamentalnie różne modele były pierwotnie inspirowane oraz bazowane na neuronauce \cite{hassabis2017neuroscience}.
+Powstałe w czasie różnice nie były przypadkowe, ale kierowane chęcią optymalizacji i specjalizacji algorytmów.
+Być może te udoskonalenia algorytmów -- oryginalnie neuro-podobnych -- będą w stanie powiedzieć nam coś o naszych własnych mózgach.
+
+Jeden z przełomów uczenia głębokiego opierał się na tym, że sieci wielowarstwowe uczono stopniowo -- warstwa po warstwie, czyli w procesie jaki ciężko sobie wyobrazić zachodzący w mózgu \cite{hinton2006fast}.
+W szczególności w uczeniu głębokim, w zasadzie z samej definicji dziedziny, sieci posiadają znacznie więcej warstw niż odpowiadające im systemy mózgowe -- dziesiątki, często setki.
+Inny niedawny przełom, jeden z głównych czynników stojących za sukcesami znanego projektu AlphaGo Zero, to sieci rezydualne.
+Ta metoda uczenia głębokiego opiera się na bezpośrednim połączeniu neuronów warstw niższych z neuronami w warstwach wyższych na zasadzie skrótu przeskakując wszystkie warstwy pomiędzy.
+Takie struktury nie odzwierciedlają rzeczywistych, biologicznych systemów neuronalnych.
+Sieci rezydualne byłyby odpowiednikiem bezpośredniego przekazywania sygnału z pierwszorzędowej kory wzrokowej (V1) do obszaru wzrokowego (V4) czy dolnej kory skroniowej (IT), co jest sprzeczne z rzeczywistym działaniem kory wzrokowej.
+
+Uczenie nadzorowane nadal wymaga ogromnych ilości danych, aby mogło rzeczywiście osiągnąć pozytywne rezultaty.
+Mózg działa podobnie, jednak wymaga nieporównywalnie mniej materiału do nauki aby wyciągnąć odpowiednie wnioski -- jest znacznie lepszy w generalizacji przy niewielkiej ilości danych.
+Gdyby dziedzina Big Data nie rozwinęła się w takim stopniu, w jakim jest aktualnie dostępna, uczenie głębokie nigdy nie miałoby tak dobrych wyników, jakie osiąga.
+Wraz z rozwojem uczenia maszynowego ta różnica potrzebnego materiału nie tylko nie została zmniejszona, ale przeciwnie -- nowsze, lepsze i potężniejsze modele są zwykle uczone na stale rosnącej liczbie danych.
+Najnowszy model językowy GPT-3 od OpenAI trenowany był na 499 miliardach tokenów \cite{brown2020language}, co w zależności od średniej wielkości tokenu (4 - 5 bajtów)\footnotemark daje od \(1.8\) do \(2.3\) terabajtów danych czysto tekstowych.
+\footnotetext{
+	Średnia długość słowa w języku angielskim wynosi nieco ponad 5 znaków \cite{bochkarev6109average}.
+	Biorąc pod uwagę, że tokenizacja danych tekstowych w zastosowaniach do przetwarzania języka naturalnego zazwyczaj się opiera na słowach, można założyć, że średnia długość tokenu będzie takiej samej długości.
+	Inni autorzy szacują jednak średnią długość tokenu na 4 znaki \cite{li2020OpenAI}.
+}
+

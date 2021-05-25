@@ -1,12 +1,67 @@
 \chapter{Modularny system symboliczny jako model działania mózgu}
 
-\section{Modelowanie mózgu}
+% \section{Modelowanie mózgu}
 
 \section{Kognitywistyczne podstawy i rozwój modelu systemu symbolicznego}
-% Connectionism
-% Cognitivism
-% Probabilistic Modeling
-% Bottom-up Emergence vs. Top-down Abstraction
+\label{cognitive-basics}
+% file:///C:/Users/mmorus/OneDrive/Moje/Studia/Kognitywistyka/Licencjat/References/Computational%20Foundations%20of%20Natural%20Intelligence.pdf
+
+\subsection{Koneksjonizm}
+
+Jedną z pierwszych teorii wiązanych z mózgiem jako systemem symbolicznym był koneksjonizm.
+Wyjaśnia on poznanie jako proces wynurzający się ze wzajemnego działania i współpracy pomiędzy podstawowymi elementami przetwarzającymi \cite{bechtel1993case}.
+
+Jest on istotny w ramach omawianego aspektu, gdyż był podstawą teoretyczną abstrakcji działania mózgowych połączeń neuronalnych, która finalnie doprowadziła do pierwszych modeli sztucznych sieci neuronowych.
+Jeszcze sam Alan Turing proponował utworzenie architektury komputerowej opartej na jednostki podobne neuronom \cite{copeland1996alan}.
+
+Koneksjonistyczna idea działania poznania sugeruje, że taka abstrakcja -- mimo, że nie oddaje szczegółów działania biologicznego mózgu -- utrzymuje naturę działania mózgu, funkcje poznawcze.
+Jak jednak zostało już opisane i zaznaczone w rozdziale \hyperref[chapter1]{rozdziale \ref{chapter1}}, szybko okazało się, że takie powiązanie okazuje się być znacznie bardziej skomplikowane i złożone.
+
+\subsection{Kognitywizm}
+
+Na koneksjonistyczne problemy modelowania działania mózgu odpowiada kognitywizm.
+W tym podejściu poznanie definiuje się jako manipulację symbolami formalnymi, gdzie wnioskowanie opiera się na manipulacji reprezentacjami symbolicznymi odpowiadającymi informacji o środowisku otrzymanej przez percepcję.
+Formalizacją takiego ujęcia była hipoteza systemu symboli fizycznych \cite{newell2007computer}, w której to taki system symboli fizycznych jest jednocześnie niezbędny oraz wystarczający dla inteligentnego zachowania.
+
+Takie podejście okazało się być bardziej zbliżone działaniu mózgu, pomogło w pierwszej fazie uformować się kognitywistyce oraz dało początek niektórym sztucznym architekturom kognitywnym opartym na regułach, takie jak SOAR \cite{laird2019soar}\footnotemark.
+\footnotetext{
+	Projekt SOAR jest do teraz aktywnie rozwijany.
+	Szczegółowe informacje na jego temat znajdują się na oficjalnej stronie: \url{https://soar.eecs.umich.edu}.
+	Repozytoria związane z projektem są otwartoźródłowe i znajdują się w serwisie GitHub: \url{https://github.com/SoarGroup}.
+}
+Ponownie jednak taka architektura okazała się nie oddawać w pełni złożoności działania poznania u człowieka.
+
+\subsection{Modelowanie probabilistyczne}
+
+W ludzkim poznaniu, a co za tym idzie w modelu działania mózgu, informacje czy samo wnioskowanie nie opiera się wyłącznie na Boole'owskiej prawdzie i fałszu, tak, jak ma to miejsce w logice pierwszego stopnia, na której oparte były poprzednie architektury.
+Zazwyczaj człowiek nie jest ``pewny'', ale ``przekonany''.
+Umysł operuje na zdarzeniach natury indukcyjnej i pewność nigdy nie jest rzeczywiście niepodważalna.
+Nie brnąc dalej w filozoficzną tematykę czym jest prawda i fałsz, wydaje się być oczywistym, że człowiek działa raczej na zasadzie prawdopodobieństw i nieokreśloności.
+
+Matematyka jednak również była tutaj w stanie pomóc, jako, że logika probabilistyczna była już dostępna i dobrze rozwinięta.
+Architektury modelujące oparte na kwantyfikacji stanu świata w terminach stopnia prawdziwości nazywanej teorią probabilistyczną \cite{jaynes1988does}, zbliżyły się jeszcze bardziej do poznania człowieka i modelowania działania ludzkiego mózgu.
+Takie podejście jest podstawą wyjaśniania podejmowania optymalnych decyzji wykonywanych w warunkach niepewności.
+Są postulaty wskazujące na to, że na poziomie algorytmicznym mózgi wykorzystują algorytmy wnioskowania przybliżonego (\emph{approximate inference}) \cite{andrieu2003introduction} tak, aby wytwarzać wystarczająco dobre rozwiązania dla szybkiego i oszczędnego podejmowania decyzji.
+
+\subsection{Oddolna emergencja a odgórna abstrakcja}
+
+Jeśli zaczniemy rozważania od odwrotnej strony przy pomocy pytania: ``jaki system sztucznie inteligenty byłby najbliższy działania rzeczywistego, biologicznego mózgu'' szybko dotrzemy do wniosku, że byłaby to jego symulacja.
+Taki system oparty by był na \emph{oddolnej emergencji} (\emph{bottom-up emergence}), gdzie zachowania i poznanie symulowanego mózgu wyłoniłoby się z symulacji najprostszych jednostek, neuronów oraz ich środowiska.
+Jednak jak twierdzi badacz, który zajmował się symulacją systemów wzgórzowo-korowych u ssaków \cite{izhikevich2008large} Eugene Izhikevich, nawet symulacja sekundy działania całego ludzkiego mózgu nie przyczyniłaby się znacząco do neuronauki \cite{Izhikevich2006why}.
+Dodając do tego ogrom skali zadania, jakim jest symulacja ludzkiego mózgu można zrozumieć, dlaczego zwrócono się w stronę alternatywnego podejścia.
+
+Rozwój podejść z kategorii \emph{odgórnej abstrakcji} (\emph{top-down abstraction}) jest obrazowany przez poprzednie tematy z \hyperref[cognitive-basics]{tej sekcji}.
+Te algorytmy są obliczeniowo wykonywalne i dzięki temu mają potencjał użytkowy do analiz teoretycznych.
+Obiecującym punktem powstałym na wyjściu implementacji założeń teoretycznych w praktyce są sztuczne sieci neuronowe, podstawa nowoczesnego głębokiego uczenia i dużej porcji całego uczenia maszynowego.
+Można je wiązać z poziomem biofizycznym -- głównym źródłem porównań przy oddolnej emergencji -- jako abstrakcje biologicznych sieci neuronów opartych na częstotliwości (\emph{rate-based}) \cite{dayan2001theoretical}.
+Architektury sieci mogą być wytwarzane w procesie ewolucyjnym, czy algorytmów bazowanych na strategiach ewolucyjnych \cite{real2017large}.
+Są zgodne również z modelowaniem probabilistycznym, jak zauważono, algorytmy obliczeniowe powstałe w wyniku uczenia są zbliżone efektywnie do wnioskowania bayesowskiego \cite{gal2016dropout, mandt2017stochastic}.
+Są związane nawet z bazą komputacjonistycznego podejścia poprzez ugruntowanie reprezentacji symbolicznych w stanach sensorycznych świata rzeczywistego \cite{harnad1990symbol}.
+
+Użycie koneksjonistycznych sztucznych sieci neuronowych wzbogaconych o architektury i struktury innych modelów systemów przetwarzania symbolicznego wydaje się być najbliżej potencjalnej inteligencji sztucznej.
+Nie jest to jednak jednoznaczne z tym, że są także najbliżej odwzorowywania działania mózgu.
+Aby móc wyciągać wnioski choćby zbliżone do takowych należy wykazać także podobieństwo w przeciwnym kierunku.
 
 \section{Zestawienie modularności mózgu z modularnością sztucznych systemów symbolicznych}
+
 

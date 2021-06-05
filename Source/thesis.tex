@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
 \usepackage{url}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[table,xcdraw]{xcolor}
 \hypersetup{
 	pdftitle={Uczenie głębokie i maszynowe a mózg},
@@ -19,8 +19,12 @@
 
 \AtBeginDocument{\let\textlabel\label}
 
-\title{Uczenie głębokie i maszynowe a mózg}
+% Make the numbering of figures continuous
+\counterwithout{figure}{chapter}
+% Make the numbering of tables continuous
+\counterwithout{table}{chapter}
 
+\title{Uczenie głębokie i maszynowe a mózg}
 \author{Mateusz Piotr Moruś}
 \college{Instytut Filozofii}
 \university{Uniwersytet Marii Curie-Skłodowskiej w Lublinie}
@@ -45,9 +49,16 @@
 % \include{abstract}          % include the abstract
 
 \begin{romanpages}          % start roman page numbering
-	\tableofcontents            % generate and include a table of contents
-	\listoffigures              % generate and include a list of figures
-	% \listoftables              % generate and include a list of tables
+	 % Generate and include a table of contents
+	\tableofcontents
+	% Create a group for list of figures and list of tables to fit both on one page
+	\begingroup
+	\let\clearpage\relax
+	% Generate and include a list of figures
+	\listoffigures
+	% Generate and include a list of tables
+	\listoftables
+	\endgroup
 \end{romanpages}            % end roman page numbering
 
 %now include the files of latex for each of the chapters etc

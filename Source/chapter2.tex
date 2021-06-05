@@ -15,7 +15,7 @@ Jest on istotny w ramach omawianego aspektu, gdyż był podstawą teoretyczną a
 Jeszcze sam Alan Turing proponował utworzenie architektury komputerowej opartej na jednostki podobne neuronom \cite{copeland1996alan}.
 
 Koneksjonistyczna idea działania poznania sugeruje, że taka abstrakcja -- mimo, że nie oddaje szczegółów działania biologicznego mózgu -- utrzymuje naturę działania mózgu, funkcje poznawcze.
-Jak jednak zostało już opisane i zaznaczone w rozdziale \hyperref[chapter1]{rozdziale \ref{chapter1}}, szybko okazało się, że takie powiązanie okazuje się być znacznie bardziej skomplikowane i złożone.
+Jak jednak zostało już opisane i zaznaczone w rozdziale \hyperref[chapter1]{rozdziale \ref*{chapter1}}, szybko okazało się, że takie powiązanie okazuje się być znacznie bardziej skomplikowane i złożone.
 
 \subsection{Kognitywizm}
 
@@ -64,4 +64,96 @@ Aby móc wyciągać wnioski choćby zbliżone do takowych należy wykazać takż
 
 \section{Zestawienie modularności mózgu z modularnością sztucznych systemów symbolicznych}
 
+\subsection{Modularność uczenia maszynowego i systemów symbolicznych}
 
+Nowoczesne architektury rozwiązań pojawiających się w dziedzinie uczenia maszynowego mają dodatkowo cechę wyłaniającą się wraz ze wzrostem złożoności systemów -- modularność.
+
+Jej wartość w uczeniu głębokim oraz szerzej pojętych sieciach neuronowych zauważana była już od dłuższego czasu \cite{schmidt1998modularity}.
+Co więcej, istnieją powody by wierzyć, że taka struktura jest w pewnym sensie optymalna.
+Gdy klasyfikator nieliniowy o budowie modularnej jest poddawany ``procesowi ewolucji'' poprzez aplikowanie szumu do jego wag wewnętrznych, topologia modularna sieci ewoluuje bez wsparcia reprezentacjonalnego \cite{hoverstad2011noise}.
+
+Analizując jako przykład biliniowe konwolucyjne sieci neuronowe (B-CNN) \cite{lin2015bilinear} taką modularność można wyraźnie dostrzec nawet w jednej jednostce sieciowej.
+Składa się ona bowiem z czterech kluczowych komponentów:
+\begin{itemize}
+	\item Dwóch niezależnych strumieni konwolucyjnych służących jako \emph{ekstraktory cech};
+	\item Operatora nakładania biliniowego (bilinear pooling) agregującego wyniki strumieni konwolucyjnych do wektora biliniowego;
+	\item Głębokiej sieci neuronowej z gęsto łączonymi warstwami służącej za \emph{klasyfikator}.
+\end{itemize}
+Można więc stwierdzić, że taka sieć neuronowa jest \emph{modularna}. Składa się z połączonych komponentów (modułów), z których każdy jest wyspecjalizowany do konkretnego zadania.
+Dodatkowo można zauważyć naturę tej modularności -- jest ona \emph{hierarchiczna}.
+Część sieci odpowiedzialna za ekstrakcję cech obrazu składa się z trzech modułów: dwie sieci konwolucyjne działające niezależnie oraz operator agregujący ich wyniki.
+
+Dodatkowo w wykorzystaniu praktycznym takich czy innych sieci czy rozwiązać uczenia maszynowego pojedynczy system traktuje się właśnie jako moduł, którego zadaniem jest wykonanie wymaganej czynności.
+Jest to moduł wyspecjalizowany w tym co robi.
+Tak tutaj, w przypadku B-CNN jej zadaniem jest klasyfikacja obrazu.
+System, który ją wykorzystuje również może być -- a nawet zazwyczaj jest -- modułem.
+Przykładowo możemy wyobrazić sobie funkcję wyszukiwarki za pomocą obrazu, która wykorzystuje moduł B-CNN aby skategoryzować obraz, a następnie inne moduły aby wyszukać obrazy z odpowiedniej kategorii.
+
+Taki sposób działania sztucznych systemów symbolicznych jest dość uniwersalny i nazywa się \emph{hierarchiczną modularnością}.
+Jest on nieodłącznym elementem informatyki, pozwala na budowanie bardzo złożonych systemów poprzez enkapsulację funkcjonalności.
+Co więcej, już prawie 60 lat temu argumentowano, że każdy złożony system jest zorganizowany w sposób hierarchiczny, niezależnie, czy jest on społeczny (np. system transportowy), czy jest fizycznym systemem symbolicznym czy nawet biologicznym \cite{simon1962architecture}.
+
+\subsection{Modularność mózgu}
+
+O tym, że sieci mózgowe są zorganizowane modularnie wiedziano już od pewnego czasu \cite{bullmore2009complex}.
+Jednak dopiero niedawno rozpoczęto badania nad charakterem tej modularności.
+Nieco konkretniej, zaczęto badać czy jest ona hierarchiczna, tak, jak przewidywał to Simon względem każdego systemu złożonego \cite{simon1962architecture}.
+Jak się okazuje, pierwsze próby wyodrębnienia takiej hierarchii modularnej sieci funkcjonalnych mózgu zakończyły się pozytywnymi wynikami \cite{meunier2009hierarchical}.
+
+Dane z przeprowadzonego badania fMRI przetworzono metodą Louvain do detekcji wspólnot.
+Wynikiem takiego przetworzenia był wielowarstwowy graf modułów funkcjonalnych, w którym warstwy odpowiadają hierarchii przynależnościowej pod-modułów do modułów wyższego rzędu.
+Analiza wyodrębniła pięć największych obszarów (modułów) najwyższego poziomu, do których dodatkowo można przyporządkować funkcje bazując na znajomości funkcji obszarów mózgowych znajdujących się w obrębie danego modułu.
+Podział ten przedstawia \hyperref[tab:modular]{tabela \ref*{tab:modular}}.
+
+\begin{center}
+	\begin{table}[ht]
+		\begin{tabular}{ | c | c | c | }
+			\hline
+			\begin{tabular}{@{}c@{}} Moduł \\ (funkcja) \end{tabular} & Liczba węzłów & Liczba pod-modułów \\
+			\hline
+			\hline
+			\begin{tabular}{@{}c@{}} Centralny \\ (sensomotoryczny) \end{tabular} & 239 & 11 \\
+			\hline
+			\begin{tabular}{@{}c@{}} Ciemieniowo-czołowy \\  (główny/uwagowy) \end{tabular} & 138 & 10 \\
+			\hline
+			\begin{tabular}{@{}c@{}} Przyśrodkowo-potyliczny \\ (pierwszorzędowy wizualny) \end{tabular} & 132 & 1 \\
+			\hline
+			\begin{tabular}{@{}c@{}} Boczno-potyliczny \\ (drugorzędowy wizualny) \end{tabular} & 101 & 1 \\
+			\hline
+			\begin{tabular}{@{}c@{}} Czołowo-skroniowy \\ (symboliczny) \end{tabular} & 89 & 24 \\
+			\hline
+		\end{tabular}
+		\caption{Moduły}
+		\label{tab:modular}
+	\end{table}
+\end{center}
+
+Mimo niewielkiej ilości tych modułów najwyższego rzędu można dostrzeć pewne prawidłowości.
+Przynależność do stopnia hierarchii nie jest równoznaczna z wielkością modułu.
+Na najwyższym poziomie wyodrębniono osiem obszarów, z czego tylko pięć wspomnianych było wystarczająco złożonych by móc podlegać dalszej analizie.
+
+Największy z nich to moduł centralny, \emph{somatosensomotoryczny}.
+Jest on jednocześnie dobrym przykładem, że podział modularny zachowywał właściwości podziału funkcjonalnego także na niższych warstwach hierarchii.
+Zawarte w module centralnym kora przyśrodkowa oraz kora boczna znalazły się bowiem w osobnych pod-modułach.
+Co więcej -- idąc głębiej, w module drugiego poziomu zawierającego korę boczną obszary przedśrodkowe oraz zaśrodkowe były odseparowane od górnej kory skroniowej.
+
+Moduł ciemieniowo-czołowy, drugi pod względem ilości zawartych w sobie węzłów, obejmował obszary funkcjonalnie odpowiadające części mózgowych \emph{głównej} oraz \emph{uwagowej}.
+On wraz z poprzednio wymienionym modułem są stosunkowo zrównoważone.
+Posiadają one liczbę pod-modułów, która nie odbiega od normy.
+Wśród nich jest niewielka ilość dużych pod-modułów i wiele małych.
+
+Następny co do wielkości moduł przyśrodkowo-potyliczny zawiera w sobie pierwszorzędową korę wzrokową, stąd funkcjonalnie przyporządkowany jest jako moduł \emph{pierwszorzędowy wizualny}.
+Jeszcze następny -- obszar boczno-potyliczny -- nazwany został modułem \emph{drugorzędowym wizualnym} z powodów analogicznych do wcześniejszego.
+Wymienione zostały przeze mnie razem, gdyż dzielą poza faktem, że funkcjonalnie odnoszą się do obszarów wizualnych, dzielą ze sobą jeszcze jedną istotną cechę -- oba posiadają wyłącznie jeden pod-moduł.
+
+Ostatni moduł najwyższego poziomu z tych wartych analizy, czołowo-skroniowy, został nazwany \emph{symbolicznym}.
+Podobnie jak inne, nazwa ta została wyciągnięta z określenia, jakim można by było skategoryzować funkcjonalnie obszary w nim zawarte.
+On również wyróżnia się spośród pozostałych, ale w kierunku przeciwnym do modułów wizualnych.
+Posiada bardzo dużą liczbę pod-modułów o stosunkowo równej wielkości.
+
+Wspomniane prawidłowości oraz różnice między-modularne tworzą dość spójny obraz modularności hierarchicznej w funkcjonalnych sieciach mózgowych.
+Modularność jest wyraźna nawet bazując na samej analizie funkcjonalnej oraz spójności powstałych obszarów, dodatkowo potwierdzone przeprowadzonym przez autorów porównaniem, w którym powstała modularność była wyższa niż dla sieci generowanych losowo.
+Hierarchiczność również jest zauważalna i dodatkowo mówi nam dużo o naturze tych wyodrębnionych obszarów funkcjonalnych.
+Warte spostrzeżenia jest, że te wnioski są zbieżne z analogicznymi sztucznymi systemami symbolicznymi oraz ich topologią.
+Obszary wizualne, podobnie jak wykorzystywane w rozwiązania w systemach widzenia maszynowego opierają się na jednej, wysoce złożonej i ``uniwersalnej'' sieci odpowiedzialnej za wyodrębnienie istotnych informacji z otoczenia.
+Obszary symboliczne natomiast składają się z wielu małych, ale wysoce wyspecjalizowanych modułów współpracujących w przetwarzaniu informacji.

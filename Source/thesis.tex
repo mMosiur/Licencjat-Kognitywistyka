@@ -14,9 +14,7 @@
 }
 \usepackage{graphicx}
 
-
 \graphicspath{ {./Images/} }
-
 \AtBeginDocument{\let\textlabel\label}
 
 % Make the numbering of figures continuous
@@ -25,31 +23,36 @@
 \counterwithout{table}{chapter}
 
 \title{Uczenie głębokie i maszynowe a mózg}
+\engtitle{Deep and machine learning and the brain}
 \author{Mateusz Piotr Moruś}
-\college{Instytut Filozofii}
+\albumnumber{292540}
 \university{Uniwersytet Marii Curie-Skłodowskiej w Lublinie}
+\college{Wydział Filozofii i Socjologii}
+\field{Kognitywistyka}
+\speciality{-}
 \submittedtext{Praca licencjacka}
-\degree{Kognitywistyka}
-\degreedate{Lublin 2021}
+\department{Katedrze Neuroinformatyki i Inżynierii Biomedycznej}
+\promoter{dr. hab. Grzegorza Marcina Wójcika, prof. UMCS}
+\degreedate{Lublin rok 2021}
 
-%end the preamble and start the document
 \begin{document}
 
-%this baselineskip gives sufficient line spacing for an examiner to easily markup the thesis with comments
+% This baselineskip gives sufficient line spacing for an examiner to easily markup the thesis with comments
 \baselineskip=18pt plus1pt
 
-%set the number of sectioning levels that get number and appear in the contents
+% Set the number of sectioning levels that get number and appear in the contents
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
+% Add a title page
+\maketitle
 
-\maketitle                  % create a title page from the preamble info
-% \include{dedication}        % include a dedication.tex file
-% \include{acknowledgements}  % include an acknowledgements.tex file
-% \include{abstract}          % include the abstract
+% Add an abstract
+\include{abstract}
 
-\begin{romanpages}          % start roman page numbering
-	 % Generate and include a table of contents
+% Start roman page numbering
+\begin{romanpages}
+	% Generate and include a table of contents
 	\tableofcontents
 	% Create a group for list of figures and list of tables to fit both on one page
 	\begingroup
@@ -59,25 +62,23 @@
 	% Generate and include a list of tables
 	\listoftables
 	\endgroup
-\end{romanpages}            % end roman page numbering
+% End roman page numbering
+\end{romanpages}
 
-%now include the files of latex for each of the chapters etc
+% Include the introduction
 \include{introduction}
+% Include the first chapter
 \include{chapter1}
+% Include the second chapter
 \include{chapter2}
+% Include the third chapter
 \include{chapter3}
 
-%now enable appendix numbering format and include any appendices
-%\appendix
-%\include{appendix1}
-%\include{appendix2}
-
-%next line adds the Bibliography to the contents page
+% Add the Bibliography to the contents page
 \addcontentsline{toc}{chapter}{Bibliografia}
-%uncomment next line to change bibliography name to references
-%\renewcommand{\bibname}{References}
-\bibliography{refs}        %use a bibtex bibliography file refs.bib
-% \bibliographystyle{plain}  %use the plain bibliography style
-\bibliographystyle{unsrt}  %use the plain bibliography style ordered by citation
+% Use a bibtex bibliography file refs.bib
+\bibliography{refs}
+% Use the plain bibliography style ordered by citation
+\bibliographystyle{unsrt}
 
 \end{document}

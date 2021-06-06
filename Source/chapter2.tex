@@ -1,10 +1,18 @@
 \chapter{Modularny system symboliczny jako model działania mózgu}
 
-% \section{Modelowanie mózgu}
+Uczenie maszynowe jest pojęciem algorytmicznym, jednak jego rzeczywista implementacja opiera się wyłącznie na najwydajniejszych obliczeniowo dostępnych systemach symbolicznych -- komputerach.
+Mózg z kolei jest najbardziej złożonym i potężnym systemem ``silnej inteligencji'' poznanym przez człowieka.
+Dlatego jeśli chcemy zestawić jego działanie z uczeniem maszynowym musimy posiadać jakiekolwiek podstawy architektoniczne.
+Dopiero podobieństwa systemowe będą punktem wyjścia do podobieństw funkcjonalnych.
+
+Jak się jednak okazuje, nie jest to jednak dużym wyzwaniem.
+Istnieje wiele dobrze podpartych powodów by uważać, że model działania mózgu -- podobnie jak komputera -- jest modularnym systemem symbolicznym.
 
 \section{Kognitywistyczne podstawy i rozwój modelu systemu symbolicznego}
 \label{cognitive-basics}
-% file:///C:/Users/mmorus/OneDrive/Moje/Studia/Kognitywistyka/Licencjat/References/Computational%20Foundations%20of%20Natural%20Intelligence.pdf
+
+Zanim można będzie analizować modularność oraz jej istotne cechy powiązane z topologią modelu systemu symbolicznego przypisanego funkcjonowaniu mózgu, należy wyjaśnić, dlaczego taka właśnie topologia jest z nim wiązana.
+W tym celu warto prześledzić drogę ewolucji idei oraz teorii odnoszących się właśnie do tej tematyki.
 
 \subsection{Koneksjonizm}
 
@@ -12,7 +20,7 @@ Jedną z pierwszych teorii wiązanych z mózgiem jako systemem symbolicznym był
 Wyjaśnia on poznanie jako proces wynurzający się ze wzajemnego działania i współpracy pomiędzy podstawowymi elementami przetwarzającymi \cite{bechtel1993case}.
 
 Jest on istotny w ramach omawianego aspektu, gdyż był podstawą teoretyczną abstrakcji działania mózgowych połączeń neuronalnych, która finalnie doprowadziła do pierwszych modeli sztucznych sieci neuronowych.
-Jeszcze sam Alan Turing proponował utworzenie architektury komputerowej opartej na jednostki podobne neuronom \cite{copeland1996alan}.
+Jeszcze sam Alan Turing, ojciec informatyki i sztucznej inteligencji, proponował utworzenie architektury komputerowej opartej na jednostki podobne neuronom \cite{copeland1996alan}.
 
 Koneksjonistyczna idea działania poznania sugeruje, że taka abstrakcja -- mimo, że nie oddaje szczegółów działania biologicznego mózgu -- utrzymuje naturę działania mózgu, funkcje poznawcze.
 Jak jednak zostało już opisane i zaznaczone w rozdziale \hyperref[chapter1]{rozdziale \ref*{chapter1}}, szybko okazało się, że takie powiązanie okazuje się być znacznie bardziej skomplikowane i złożone.
@@ -60,9 +68,15 @@ Są związane nawet z bazą komputacjonistycznego podejścia poprzez ugruntowani
 
 Użycie koneksjonistycznych sztucznych sieci neuronowych wzbogaconych o architektury i struktury innych modelów systemów przetwarzania symbolicznego wydaje się być najbliżej potencjalnej inteligencji sztucznej.
 Nie jest to jednak jednoznaczne z tym, że są także najbliżej odwzorowywania działania mózgu.
-Aby móc wyciągać wnioski choćby zbliżone do takowych należy wykazać także podobieństwo w przeciwnym kierunku.
+Aby móc wyciągać takie wnioski należy wykazać także, że mózg również można zaliczyć do kategorii systemów symbolicznych o topologii choćby zbliżonej do wymienionych.
+W tym warto wspomnieć i bardzo istotnej cesze sztucznych systemów symbolicznych zgodnej z ideą budowania takowych od podstaw \cite{bechtel1993case} : \emph{modularność}.
 
 \section{Zestawienie modularności mózgu z modularnością sztucznych systemów symbolicznych}
+
+Intuicyjne czujemy, że sztuczne systemy symboliczne -- czyli w rzeczywistych implementacjach po prostu komputery -- są modularne.
+Dodatkowo dla osób związanych bliżej z architekturą komputerową, w tym w szczególności architekturą oprogramowania, oczywista jest prawdziwość takiego sformułowania również w kontekście programów, czyli funkcjonalnością systemową.
+Z kolei jedną z pierwszych rzeczy przyswajanych przy uczeniu się neurobiologii jest podział mózgu na pola Brodmanna, które również można interpretować jako swoistą modularność.
+Mimo wszystko te tezy warto przeanalizować dokładniej, gdyż pojawia się tu więcej istotnych cech wspólnych niż może się to wydawać.
 
 \subsection{Modularność uczenia maszynowego i systemów symbolicznych}
 
@@ -105,28 +119,30 @@ Wynikiem takiego przetworzenia był wielowarstwowy graf modułów funkcjonalnych
 Analiza wyodrębniła pięć największych obszarów (modułów) najwyższego poziomu, do których dodatkowo można przyporządkować funkcje bazując na znajomości funkcji obszarów mózgowych znajdujących się w obrębie danego modułu.
 Podział ten przedstawia \hyperref[tab:modular]{tabela \ref*{tab:modular}}.
 
-\begin{center}
-	\begin{table}[ht]
-		\begin{tabular}{ | c | c | c | }
+
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{  c | c | c   }
 			\hline
-			\begin{tabular}{@{}c@{}} Moduł \\ (funkcja) \end{tabular} & Liczba węzłów & Liczba pod-modułów \\
+			Moduł & Liczba węzłów & Liczba pod-modułów \\
 			\hline
 			\hline
-			\begin{tabular}{@{}c@{}} Centralny \\ (sensomotoryczny) \end{tabular} & 239 & 11 \\
-			\hline
-			\begin{tabular}{@{}c@{}} Ciemieniowo-czołowy \\  (główny/uwagowy) \end{tabular} & 138 & 10 \\
-			\hline
-			\begin{tabular}{@{}c@{}} Przyśrodkowo-potyliczny \\ (pierwszorzędowy wizualny) \end{tabular} & 132 & 1 \\
-			\hline
-			\begin{tabular}{@{}c@{}} Boczno-potyliczny \\ (drugorzędowy wizualny) \end{tabular} & 101 & 1 \\
-			\hline
+			\begin{tabular}{@{}c@{}} Centralny \\ (sensomotoryczny) \end{tabular} & 239 & 11  \\[1em]
+
+			\begin{tabular}{ @{}c@{}} Ciemieniowo-czołowy \\  (główny/uwagowy) \end{tabular} & 138 & 10  \\[1em]
+
+			\begin{tabular}{@{}c@{}} Przyśrodkowo-potyliczny \\ (pierwszorzędowy wizualny) \end{tabular} & 132 & 1 \\[1em]
+
+			\begin{tabular}{@{}c@{}} Boczno-potyliczny \\ (drugorzędowy wizualny) \end{tabular} & 101 & 1 \\[1em]
 			\begin{tabular}{@{}c@{}} Czołowo-skroniowy \\ (symboliczny) \end{tabular} & 89 & 24 \\
 			\hline
 		\end{tabular}
-		\caption{Moduły}
-		\label{tab:modular}
-	\end{table}
-\end{center}
+	\end{center}
+	\caption{Moduły najwyższego poziomu hierarchii sieci funkcjonalnych mózgu}
+	\label{tab:modular}
+
+\end{table}
+
 
 Mimo niewielkiej ilości tych modułów najwyższego rzędu można dostrzeć pewne prawidłowości.
 Przynależność do stopnia hierarchii nie jest równoznaczna z wielkością modułu.

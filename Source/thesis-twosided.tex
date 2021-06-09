@@ -1,4 +1,5 @@
-\documentclass[12pt]{ociamthesis}
+% Two-sided document
+\documentclass[12pt, twoside]{ociamthesis}
 \usepackage{helvet}
 \usepackage{amssymb}
 \usepackage[utf8]{inputenc}
@@ -25,8 +26,8 @@
 % Make the numbering of tables continuous
 \counterwithout{table}{chapter}
 
-\title{Uczenie głębokie i maszynowe a mózg}
-\engtitle{Deep and machine learning and the brain}
+\title{Uczenie głębokie i maszynowe\\a mózg}
+\engtitle{Deep and machine learning\\and the brain}
 \author{Mateusz Piotr Moruś}
 \albumnumber{292540}
 \university{UNIWERSYTET MARII CURIE-SKŁODOWSKIEJ W~LUBLINIE}
@@ -49,6 +50,8 @@
 
 % Add a title page
 \maketitle
+% Insert a blank page after the title page
+\cleardoublepage
 
 % Add an abstract
 \include{abstract}

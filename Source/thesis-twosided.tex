@@ -26,7 +26,7 @@
 % Make the numbering of tables continuous
 \counterwithout{table}{chapter}
 
-\title{Uczenie głębokie i maszynowe\\a mózg}
+\title{Uczenie głębokie i maszynowe\\a mózg\\ \ }
 \engtitle{Deep and machine learning\\and the brain}
 \author{Mateusz Piotr Moruś}
 \albumnumber{292540}
@@ -59,7 +59,9 @@
 % Start roman page numbering
 \begin{romanpages}
 	% Generate and include a table of contents
+	\renewcommand{\baselinestretch}{1.1}\normalsize
 	\tableofcontents
+	\renewcommand{\baselinestretch}{1.2}\normalsize
 	% Create a group for list of figures and list of tables to fit both on one page
 	\begingroup
 	\let\clearpage\relax
@@ -79,6 +81,8 @@
 \include{chapter2}
 % Include the third chapter
 \include{chapter3}
+% Include the fourth chapter
+\include{chapter4}
 
 % Add the Bibliography to the contents page
 \addcontentsline{toc}{chapter}{Bibliografia}

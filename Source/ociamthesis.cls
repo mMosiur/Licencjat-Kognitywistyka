@@ -116,7 +116,7 @@
   \renewcommand{\footnotesize}{\small}
   \renewcommand{\footnoterule}{\relax}
   \thispagestyle{empty}
-  \setlength{\topmargin}{-1.2in}
+  \setlength{\topmargin}{-1.1in}
     \setlength{\oddsidemargin}{8em}
     \null\vfill
     \setlength{\parindent}{0em}
@@ -139,7 +139,7 @@
       { \LARGE {\bfseries {\@title}} \par}
       \vspace*{4ex}
       { \large {\bfseries {\@engtitle}} \par}
-      \vspace*{1.2in}
+      \vspace*{1in}
       {\@submittedtext \par}
       {{napisana w }{\@department \par}}
       {{pod kierunkiem }{\@promoter \par}}

@@ -110,18 +110,32 @@ Co więcej, już prawie 60 lat temu argumentowano, że każdy złożony system j
 
 \subsection{Modularność mózgu}
 
-O tym, że sieci mózgowe są zorganizowane modularnie wiedziano już od pewnego czasu \cite{bullmore2009complex}.
-Jednak dopiero niedawno rozpoczęto badania nad charakterem tej modularności.
-Nieco konkretniej, zaczęto badać czy jest ona hierarchiczna, tak, jak przewidywał to Simon względem każdego systemu złożonego \cite{simon1962architecture}.
+Istnieją prace analizujące modularność mózgu.
+Jak się okazuje, modularność ta nie jawi się wyłącznie w różnicach cytoarchitektonicznych, które pozwoliły wyodrębnić obszary nazywane polami Brodmanna.
+Jawi się ona także na ``wyższym poziomie'' abstrakcji, w sieciach funkcjonalnych.
+Przeprowadzone analizy wykazały, że w wyniku podziału modularnego powstają spójne sieci topologiczne \cite{bullmore2009complex}.
+Niedawno rozpoczęto także badania nad charakterem tej modularności.
+Co istotne w tej tematyce, zaczęto badać czy jest ona hierarchiczna, tak, jak przewidywał to Simon względem każdego systemu złożonego \cite{simon1962architecture}.
 Jak się okazuje, pierwsze próby wyodrębnienia takiej hierarchii modularnej sieci funkcjonalnych mózgu zakończyły się pozytywnymi wynikami \cite{meunier2009hierarchical}.
 
 Dane z przeprowadzonego badania fMRI przetworzono metodą Louvain do detekcji wspólnot.
 Wynikiem takiego przetworzenia był wielowarstwowy graf modułów funkcjonalnych, w którym warstwy odpowiadają hierarchii przynależnościowej pod-modułów do modułów wyższego rzędu.
 Analiza wyodrębniła pięć największych obszarów (modułów) najwyższego poziomu, do których dodatkowo można przyporządkować funkcje bazując na znajomości funkcji obszarów mózgowych znajdujących się w obrębie danego modułu.
-Podział ten przedstawia \hyperref[tab:modular]{tabela \ref*{tab:modular}}.
+Podział ten przedstawia \hyperref[fig:brain-functional-modules]{rysunek \ref*{fig:brain-functional-modules}}.
 
+\begin{figure}[t]
+	\includegraphics[width=\textwidth]{Images/BrainFunctionalModules}
+	\caption{Moduły najwyższego poziomu hierarchii modularnej sieci funkcjonalnych mózgu}
+	Rysunek zaadoptowany z pracy autorów \cite{meunier2009hierarchical}.
+	Pokazuje obszary pięciu największych modułów trzeciej (najwyższej) hierarchii.
+	\label{fig:brain-functional-modules}
+\end{figure}
 
-\begin{table}[h]
+Mimo niewielkiej ilości tych modułów najwyższego rzędu można dostrzeć pewne prawidłowości.
+Jak widać na szczegółowych danych w \hyperref[tab:modular]{tabeli \ref*{tab:modular}}, przynależność do stopnia hierarchii nie jest równoznaczna z wielkością modułu.
+Na najwyższym poziomie wyodrębniono osiem obszarów, z czego tylko pięć wspomnianych było wystarczająco złożonych by móc podlegać dalszej analizie.
+
+\begin{table}[ht]
 	\begin{center}
 		\begin{tabular}{  c | c | c   }
 			\hline
@@ -129,25 +143,18 @@ Podział ten przedstawia \hyperref[tab:modular]{tabela \ref*{tab:modular}}.
 			\hline
 			\hline
 			\begin{tabular}{@{}c@{}} Centralny \\ (sensomotoryczny) \end{tabular} & 239 & 11  \\[1em]
-
 			\begin{tabular}{ @{}c@{}} Ciemieniowo-czołowy \\  (główny/uwagowy) \end{tabular} & 138 & 10  \\[1em]
-
 			\begin{tabular}{@{}c@{}} Przyśrodkowo-potyliczny \\ (pierwszorzędowy wizualny) \end{tabular} & 132 & 1 \\[1em]
-
 			\begin{tabular}{@{}c@{}} Boczno-potyliczny \\ (drugorzędowy wizualny) \end{tabular} & 101 & 1 \\[1em]
 			\begin{tabular}{@{}c@{}} Czołowo-skroniowy \\ (symboliczny) \end{tabular} & 89 & 24 \\
 			\hline
 		\end{tabular}
 	\end{center}
 	\caption{Moduły najwyższego poziomu hierarchii sieci funkcjonalnych mózgu}
+	Tabela zaadoptowana z pracy autorów \cite{meunier2009hierarchical}.
+	Przedstawia ilość węzłów znajdujących się wewnątrz każdego z największych modułów najwyższego poziomu hierarchii oraz ilość znajdujących się w nich pod-modułów.
 	\label{tab:modular}
-
 \end{table}
-
-
-Mimo niewielkiej ilości tych modułów najwyższego rzędu można dostrzeć pewne prawidłowości.
-Przynależność do stopnia hierarchii nie jest równoznaczna z wielkością modułu.
-Na najwyższym poziomie wyodrębniono osiem obszarów, z czego tylko pięć wspomnianych było wystarczająco złożonych by móc podlegać dalszej analizie.
 
 Największy z nich to moduł centralny, \emph{somatosensomotoryczny}.
 Jest on jednocześnie dobrym przykładem, że podział modularny zachowywał właściwości podziału funkcjonalnego także na niższych warstwach hierarchii.

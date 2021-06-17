@@ -9,7 +9,7 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2" value="Wyspecjalizowane pod-systemy" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
+                <mxCell id="2" value="Wyspecjalizowane podsystemy" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
                     <mxGeometry x="19" y="110" width="790" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="System wyszukiwania ścieżki&lt;br&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: right&quot;&gt;&lt;span&gt;(np. hipokamp)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
